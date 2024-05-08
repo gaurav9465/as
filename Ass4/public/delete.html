@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Data</title>
+</head>
+<body>
+  <h1>Delete Data</h1>
+  <form id="deleteForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="button" onclick="deleteData()">Delete</button>
+  </form>
+
+  <script>
+    async function deleteData() {
+      const name = document.getElementById('name').value;
+
+      try {
+        const response = await fetch(`/deletedata/${name}`, {
+          method: 'DELETE'
+        });
+
+        if (response.ok) {
+          console.log("Data Deleted Successfully");
+        } else {
+          console.error("Error deleting data:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error deleting data:", error.message);
+      }
+    }
+  </script>
+</body>
+</html>
