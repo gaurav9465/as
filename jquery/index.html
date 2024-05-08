@@ -1,0 +1,584 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppPro</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/themes/apppro.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	 <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="css/themes/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/themes/owl.theme.default.min.css">
+	
+	<link rel="stylesheet" href="css/app.css" />
+	
+    <script src="lib/jquery-1.6.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.0.min.js"></script>
+	<script src="lib/owl.carousel.min.js"></script>
+	
+	<script src="app/app.js"></script>
+  </head> 
+<body class="container">
+<div data-role="page" id="splash" style="background-color: #fff;"> 
+    <div class="contianer splash-bg">
+    <div class="splash">
+        <img src="css/images/logo.png" alt="splash" />
+		<p class="center-align white-label"><a href="#login" class="white-label" style="font-size:22px">SKIP</a></p>
+    </div>
+	
+	</div>
+</div>
+<!-- second page starts -->
+	<div data-role="page" id="login" data-title="login">
+    	<div data-role="header">
+            <h1>Login</h1>
+        </div>
+       
+        <div data-role="content">
+		 <div class="brand"><img src="css/images/logo.png"/></div>
+        	<!-------------- First page main content ----------->
+			<div class="login-form">
+			<form method="post" action="#pageone" data-ajax="false">
+			
+			<input type="email" name="name" id="name" placeholder="Email Id">
+			
+			<input type="password" id="email" name="email" placeholder="Password"/>
+			
+			<a href="#dashbaord"><input type="button" class="app-btn" value="submit"></a>
+			</form>
+			<div class="center-align">Don't you have an account?, <a href="#signup">SIGNUP</a></div>
+			<div class="center-align"><a href="#forgotpassword">Forgot Password ?</a></div>
+			
+			 <div class="center-align mar-top30"><a href="">Privecy policy</a> <br><a href="">Terms and Conditions</a></div>
+			</div>
+        </div>
+        <div class="footer">
+         
+        </div>
+        
+    </div>
+	<div data-role="page" id="signup" data-title="sign up">
+    	<div data-role="header">
+            <h1>Create new account</h1>
+        </div>
+    
+          <div data-role="content">
+        	<!-------------- First page main content ----------->
+			<div class="login-form">
+			<form method="post" action="#pageone" data-ajax="false">
+			
+			<input type="text" name="name" id="Username" placeholder="Username">
+			
+			<input type="password" id="password" name="email" placeholder="Password"/>
+			<input type="text" id="password" name="email" placeholder="DOB (Date of Birth)"/>
+			
+			<div class="upload-pic"><img src="css/images/user.svg" class="upload-pic-img"/> <span class="pu-labl">Upload profile pic</span></div>
+			
+			<a href="#verifyotp"><input type="button" class="app-btn" value="create"></a>
+			</form>
+			<div class="center-align">Allready have account?, <a href="#login">Login</a></div>
+			<div class="center-align"><a href="#forgotpassword">Forgot Password ?</a></div>
+			<div class="center-align mar-top30"><a href="">Privecy policy</a> <br><a href="">Terms and Conditions</a></div>
+			</div>
+        </div>
+      
+    
+        
+    </div>
+	
+	<div data-role="page" id="verifyotp" data-title="verifyotp">
+    	
+    
+          <div data-role="content">
+        	<!-------------- First page main content ----------->
+			<div class="login-form">
+			<form method="post" data-ajax="false">
+			  <div class="white-label">Verification Code sent to your Registered mail</div>
+			<input type="text" name="name" id="Username" placeholder="Enter OTP">
+			
+			<a href="#verifyotpmsg"><input type="button" class="app-btn" value="verify"></a>
+			</form>
+			<div class="center-align">Allready have account?, <a href="#login">Login</a></div>
+			</div>
+        </div>
+      
+    </div>
+		<div data-role="page" id="verifyotpmsg" data-title="verifyotpmsg">
+    	
+    
+          <div data-role="content">
+        	<!-------------- First page main content ----------->
+			<div class="login-form verifyotpmsg">
+			
+			<a href="#login">
+			 <div class="center-align">Account Activated !!</div>
+			 <div class="center-align">Welcome to<br/> 
+			<img src="css/images/header-logo-small.png" class="brand"/>
+			 </div>
+			</a>
+			 <div class="center-align" style="margin-top:60px;font-size:18px;color:#fff;"><a href="#dashbaord">Skipp >></a></div>
+			</div>
+        </div>
+      
+    </div>
+	
+	
+		<div data-role="page" id="forgotpassword" data-title="forgotpassword">
+    	<div data-role="header">
+            <h1>Forgot Password</h1>
+        </div>
+    
+          <div data-role="content">
+        	<!-------------- First page main content ----------->
+			<div class="login-form">
+			<form method="post" data-ajax="false">
+			
+			<input type="text" name="name" id="Username" placeholder="Email id">
+			
+			<a href="#login"><input type="button" class="app-btn" value="reset"></a>
+			</form>
+			<div class="center-align">Allready have account?, <a href="#login">Login</a></div>
+			</div>
+        </div>
+        <div class="footer">
+          <a href="">Privecy policy</a> <br><a href="">Terms and Conditions</a>
+        </div>
+    
+        
+    </div>
+	
+		<div data-role="page" id="dashbaord" data-title="dashbaord">
+    	<div data-role="header" class="custom-ui-header">
+          <!--  <div class="left-logo">
+			
+			</div>-->
+			<div class="right-text padd-left-16 col-90">
+				<img src="css/images/header-logo-small.png" class="brand"/>
+               <a href="#login"> <img src="css/images/logout.svg" class="logout"/> </a>
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>
+    
+          <div data-role="content">
+        	<div class="row">
+			<form method="get" action="/search" id="searchbox5">
+             <input id="search51" name="q" type="text" size="40" placeholder="Search..." />
+            </form>
+	        </div>
+			
+			<div class="row usre-block">
+			 
+			<div class="user-name">
+			 Welcome Stella 
+			</div>
+			<div class="user-image">
+			 <img src="css/images/user-image.png">
+			 </div>
+			</div>
+			<div class="divder"></div>
+			<div class="row">
+			
+			<a href="#healthinformation"><div class="d-menu">
+			<div class="d-icon">
+			  <img src="css/images/heartbeat.svg"/>
+			</div>
+			<div class="d-nav-text">Health Information</div>
+			</div> </a>
+			<a href="#clubs">
+			<div class="d-menu">
+			<div class="d-icon">
+			<img src="css/images/university.svg"/>
+			</div>
+			<div class="d-nav-text">What's Good on Campus</div>
+			
+			</div></a>
+			
+			<a href="#falshservices"><div class="d-menu">
+			<div class="d-icon">
+			<img src="css/images/delivery.svg"/>
+			</div>
+			<div class="d-nav-text">Falsh Services</div>
+			</div></a>
+			
+			<a href="#moves"><div class="d-menu">
+			<div class="d-icon">
+			<img src="css/images/ice-skating-move.svg"/>
+			</div>
+			<div class="d-nav-text">The Moves</div>
+			</div></a>
+			
+			</div>
+			
+			<div class="feedback">
+			  <div class="feedback-overlay">
+			   <span class="caption-text">Questions or Comments?<br>
+               hello@FreshApp.com</span>
+			  </div>
+			</div>
+		
+        </div>
+
+    </div>
+	
+	<div data-role="page" id="healthinformation" data-title="healthinformation">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#dashbaord"><img src="css/images/left-arrow.svg" class="back-arrow"/></a>
+			</div>
+			<div class="right-text padd-left-16">
+				<span class="header-text">Health Information</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+        	<div class="row">
+			<a href="#upcomingevents">
+			 <div class="nav-block">Upcoming events
+			  <span class="next-arrow"><img src="css/images/next.svg"/></span>
+			 </div>
+			 </a>
+			</div>
+			<a href="#importantnumbers">
+			<div class="row">
+             <div class="nav-block"> Important numbers  
+			  <span class="next-arrow"><img src="css/images/next.svg"/></span>
+			 </div>
+			</div>
+			</a>
+			
+        </div>
+    </div>
+	
+		<div data-role="page" id="upcomingevents" data-title="upcomingevents">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#healthinformation"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Upcoming Events</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+        	<div class="row list-view-row">
+			<ul data-role="listview">
+			    <li>The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input,</li>
+			    <li>The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input,</li>
+			    <li>The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input,</li>
+			    <li>The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input,</li>
+			    <li>The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input,</li>
+			</ul>
+			</div>
+		
+			
+        </div>
+    </div>
+	
+	<div data-role="page" id="importantnumbers" data-title="importantnumbers">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#healthinformation"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Important Numbers</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+        	<div class="row list-view-row contact">
+			<ul data-role="listview">
+			    
+			<li>Alason  <span class="phone-num">+91 8871762344</span></li>
+			<li>Johanton  <span class="phone-num">+91 8871762344</span></li>
+			<li>Winson  <span class="phone-num">+91 8871762344</span></li>
+			<li>Olvier  <span class="phone-num">+91 8871762344</span></li>
+			<li>Hennry  <span class="phone-num">+91 8871762344</span></li>
+			<li>Johan  <span class="phone-num">+91 8871762344</span></li>
+			<li>Winger  <span class="phone-num">+91 8871762344</span></li>
+			
+			   
+			</ul>
+			</div>
+		
+			
+        </div>
+    </div>
+	
+	
+	<div data-role="page" id="clubs" data-title="clubs">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#dashbaord"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Campus</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  <div class="row padd-top-20">
+        	<ul data-role="listview" class="clubs" data-autodividers="true" data-filter="true" data-inset="true">
+    <li><a href="index.html">Adam Kinkaid</a></li>
+    <li><a href="index.html">Alex Wickerham</a></li>
+    <li><a href="index.html">Avery Johnson</a></li>
+    <li><a href="index.html">Bob Cabot</a></li>
+    <li><a href="index.html">Caleb Booth</a></li>
+    <li><a href="index.html">Christopher Adams</a></li>
+    <li><a href="index.html">Culver James</a></li>
+</ul>
+		</div>
+			
+        </div>
+    </div>
+	
+	
+	
+	<div data-role="page" id="falshservices" data-title="falshservices">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#dashbaord"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Falsh Services</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  <div class="row padd-top-20" id="disclaimer">
+            <p>This is just placeholder text. It is to be replaced with words of your choice. This is just placeholder text. It is to be replaced with words of your choice. This is just placeholder text. It is to be replaced with words of your choice. This is just placeholder text. It is to be replaced with words of your choice. This is placeholder text. It is to be replaced with words of your choice. This is placeholder text. It is to be replaced with words of your choice. This is placeholder text. It is to be replaced with words of your choice.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a href="#studentsservice"> <h3 class="align-center underline i-agree">Click here to Agree</h3> </a>
+</p>
+          
+		</div>
+			
+        </div>
+    </div>
+	
+	
+	<div data-role="page" id="studentsservice" data-title="studentsservice">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#dashbaord"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Students Service</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  
+           <div class="row list-view-row contact">
+			<ul data-role="listview">
+			    
+			<li>Hair</li>
+			<li>Nails/Thread/Wax</li>
+			<li>Photographers</li>
+			<li>Tech Repairs</li>
+			<li>Trainig</li>
+			   
+			</ul>
+			
+			
+          
+		</div>
+		<div class="row align-center underline padd-top-120">
+        <a href="#register">Intersted In <br>Promoting your services?</a>
+          </div>
+
+			
+        </div>
+    </div>
+	
+	<div data-role="page" id="register" data-title="register">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#studentsservice"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Business Profile</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  
+           <div class="row list-view-row regform">
+			
+			<div data-role="fieldcontain" class="ui-hide-label">
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username" value="" placeholder="Name of Company"/>
+</div>
+
+<div data-role="fieldcontain" class="ui-hide-label">
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username" value="" placeholder="Description"/>
+</div>
+
+<div data-role="fieldcontain" class="ui-hide-label">
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username" value="" placeholder="Prices"/>
+</div>
+
+<div data-role="fieldcontain" class="ui-hide-label">
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username" value="" placeholder="Pictures"/>
+</div>
+			
+        <a href="#studentsservice"><input type="button" class="app-btn" value="create"></a>  
+		</div>
+		
+
+			
+        </div>
+    </div>
+	
+	
+	<div data-role="page" id="moves" data-title="moves">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#dashbaord"><img src="css/images/left-arrow.svg" class="back-arrow"/></a>
+			</div>
+			<div class="right-text padd-left-16">
+				<span class="header-text">Moves</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+        	<div class="row">
+			<a href="#safetytips">
+			 <div class="nav-block">Safety Tips
+			  <span class="next-arrow"><img src="css/images/next.svg"/></span>
+			 </div>
+			 </a>
+			</div>
+			<a href="#goingout">
+			<div class="row">
+             <div class="nav-block"> Going Out? 
+			  <span class="next-arrow"><img src="css/images/next.svg"/></span>
+			 </div>
+			</div>
+			</a>
+			
+        </div>
+    </div>
+	
+	
+	<div data-role="page" id="safetytips" data-title="safetytips">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#moves"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Safety Tips</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  
+           <div class="row list-view-row contact">
+			<ul data-role="listview">
+			    
+			<li>Safety Tips 1</li>
+			<li>Safety Tips 2</li>
+			<li>Safety Tips 3</li>
+			<li>Safety Tips 4</li>
+			<li>Safety Tips 5</li>
+			<li>Safety Tips 6</li>
+			
+			   
+			</ul>
+			
+			
+          
+		</div>
+	
+
+			
+        </div>
+    </div>
+	
+	
+	<div data-role="page" id="goingout" data-title="goingout">
+    	<div data-role="header" class="custom-ui-header">
+          <div class="left-logo col-10">
+			<a href="#moves"><img src="css/images/left-arrow.svg" class="back-arrow"/>
+			</a>
+			</div>
+			
+			<div class="right-text padd-left-16">
+				<span class="header-text">Register for Trip</span>
+                 
+				<!-- <span class="header-text">Dashbaord</span>-->
+			</div>
+        </div>    
+          <div data-role="content">
+		  
+           <div class="row list-view-row regform">
+			
+					<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Host name"/>
+		</div>
+
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Quick Description"/>
+		</div>
+
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Time"/>
+		</div>
+
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Address"/>
+		</div>
+				<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Fee"/>
+		</div>
+       
+		</div>
+		
+
+			
+        </div>
+    </div>
+	
+	
+</body>
+</html>
